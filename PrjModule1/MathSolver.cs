@@ -18,6 +18,8 @@ namespace PrjModule1
         public static double GetSumSin(double[] angles, int type)
         {
             double sum = 0;
+            if (angles == null)
+                throw new MathSolverExeption("Array couldn't be empty");
             switch (type)
             {
                 case 1:
@@ -60,6 +62,8 @@ namespace PrjModule1
         public static double GetSumSin(double[] angles, int type, int decimals)
         {
             double sum = 0;
+            if (angles==null)
+                throw new MathSolverExeption("Array couldn't be empty");
             switch (type)
             {
                 case 1:
@@ -101,6 +105,8 @@ namespace PrjModule1
         public static double GetSumCosin(double[] angles, int type)
         {
             double sum = 0;
+            if (angles == null)
+                throw new MathSolverExeption("Array couldn't be empty");
             switch (type)
             {
                 case 1:
@@ -143,6 +149,8 @@ namespace PrjModule1
         public static double GetSumCosin(double[] angles, int type, int decimals)
         {
             double sum = 0;
+            if (angles == null)
+                throw new MathSolverExeption("Array couldn't be empty");
             switch (type)
             {
                 case 1:
@@ -184,6 +192,8 @@ namespace PrjModule1
         public static double GetDifferenceSin(double[] angles, int type)
         {
             double diff = 0;
+            if (angles == null)
+                throw new MathSolverExeption("Array couldn't be empty");
             switch (type)
             {
                 case 1:
@@ -226,6 +236,8 @@ namespace PrjModule1
         public static double GetDifferenceSin(double[] angles, int type, int decimals)
         {
             double diff = 0;
+            if (angles == null)
+                throw new MathSolverExeption("Array couldn't be empty");
             switch (type)
             {
                 case 1:
@@ -267,6 +279,8 @@ namespace PrjModule1
         public static double GetDifferenceCosin(double[] angles, int type)
         {
             double diff = 0;
+            if (angles == null)
+                throw new MathSolverExeption("Array couldn't be empty");
             switch (type)
             {
                 case 1:
@@ -309,6 +323,8 @@ namespace PrjModule1
         public static double GetDifferenceCosin(double[] angles, int type, int decimals)
         {
             double diff = 0;
+            if (angles == null)
+                throw new MathSolverExeption("Array couldn't be empty");
             switch (type)
             {
                 case 1:
@@ -350,6 +366,8 @@ namespace PrjModule1
         public static double GetProductSin(double[] angles, int type)
         {
             double prod = 1;
+            if (angles == null)
+                throw new MathSolverExeption("Array couldn't be empty");
             switch (type)
             {
                 case 1:
@@ -392,6 +410,8 @@ namespace PrjModule1
         public static double GetProductSin(double[] angles, int type, int decimals)
         {
             double prod = 1;
+            if (angles == null)
+                throw new MathSolverExeption("Array couldn't be empty");
             switch (type)
             {
                 case 1:
@@ -433,6 +453,8 @@ namespace PrjModule1
         public static double GetProductCosin(double[] angles, int type)
         {
             double prod = 1;
+            if (angles == null)
+                throw new MathSolverExeption("Array couldn't be empty");
             switch (type)
             {
                 case 1:
@@ -475,6 +497,8 @@ namespace PrjModule1
         public static double GetProductCosin(double[] angles, int type, int decimals)
         {
             double prod = 1;
+            if (angles == null)
+                throw new MathSolverExeption("Array couldn't be empty");
             switch (type)
             {
                 case 1:
