@@ -132,7 +132,7 @@ namespace PrjModule1
         private static Dictionary<int, string> ShowMethods(Type type)
         {
             Dictionary<int, string> methodsForChose = new Dictionary<int, string>();
-            List<string> methods = new List<string> { "GetType", "ToString", "Equals", "GetHashCode", "InvokeGetMethod" };//Excluded methods
+            List<string> methods = new List<string> { "GetType", "ToString", "Equals", "GetHashCode", "InvokeGetMethod", "StringLineToDouble" };//Excluded methods
 
             int itter = 0;
             if (type.GetMethods().Length == 0)
