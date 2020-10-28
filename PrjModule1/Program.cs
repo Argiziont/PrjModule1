@@ -150,7 +150,7 @@ namespace PrjModule1
                 }
             }
             return methodsForChose;
-        }
+        } 
 
         private static void ConsoleWithColor(string message, ConsoleColor color)
         {

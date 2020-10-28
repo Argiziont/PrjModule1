@@ -64,6 +64,8 @@ namespace PrjModule1
             double sum = 0;
             if (angles==null)
                 throw new MathSolverExeption("Array couldn't be empty");
+            if (decimals < 0)
+                throw new MathSolverExeption("Decimals couldn't be zero");
             switch (type)
             {
                 case 1:
@@ -151,6 +153,8 @@ namespace PrjModule1
             double sum = 0;
             if (angles == null)
                 throw new MathSolverExeption("Array couldn't be empty");
+            if (decimals < 0)
+                throw new MathSolverExeption("Decimals couldn't be zero");
             switch (type)
             {
                 case 1:
@@ -238,6 +242,8 @@ namespace PrjModule1
             double diff = 0;
             if (angles == null)
                 throw new MathSolverExeption("Array couldn't be empty");
+            if (decimals < 0)
+                throw new MathSolverExeption("Decimals couldn't be zero");
             switch (type)
             {
                 case 1:
@@ -325,6 +331,8 @@ namespace PrjModule1
             double diff = 0;
             if (angles == null)
                 throw new MathSolverExeption("Array couldn't be empty");
+            if (decimals < 0)
+                throw new MathSolverExeption("Decimals couldn't be zero");
             switch (type)
             {
                 case 1:
@@ -412,6 +420,8 @@ namespace PrjModule1
             double prod = 1;
             if (angles == null)
                 throw new MathSolverExeption("Array couldn't be empty");
+            if (decimals < 0)
+                throw new MathSolverExeption("Decimals couldn't be zero");
             switch (type)
             {
                 case 1:
@@ -499,6 +509,8 @@ namespace PrjModule1
             double prod = 1;
             if (angles == null)
                 throw new MathSolverExeption("Array couldn't be empty");
+            if (decimals < 0)
+                throw new MathSolverExeption("Decimals couldn't be zero");
             switch (type)
             {
                 case 1:
