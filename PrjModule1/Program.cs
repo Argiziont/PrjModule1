@@ -7,6 +7,11 @@ namespace PrjModule1
     {
         static void Main()
         {
+            //Dot in console
+            System.Globalization.CultureInfo customCulture = (System.Globalization.CultureInfo)System.Threading.Thread.CurrentThread.CurrentCulture.Clone();
+            customCulture.NumberFormat.NumberDecimalSeparator = ".";
+            System.Threading.Thread.CurrentThread.CurrentCulture = customCulture;
+            //
 
             //Ask user what he want to do
             Console.WriteLine("Select the method of providing the source data \n" +

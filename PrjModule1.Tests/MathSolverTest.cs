@@ -7,7 +7,14 @@ namespace PrjModule1.Tests
 {
     public class MathSolverTest
     {
-
+        public MathSolverTest()
+        {
+            //Dot in console
+            System.Globalization.CultureInfo customCulture = (System.Globalization.CultureInfo)System.Threading.Thread.CurrentThread.CurrentCulture.Clone();
+            customCulture.NumberFormat.NumberDecimalSeparator = ".";
+            System.Threading.Thread.CurrentThread.CurrentCulture = customCulture;
+            //     
+        }
 
         #region snippet_GetSumSin_ReturnsDouble_InputIsArrayOfDegrees
         [Fact]
@@ -724,6 +731,49 @@ namespace PrjModule1.Tests
 
             // Act
             void result() => MathSolver.InvokeGetMethod(nameof(MathSolver.GetSumSin), new List<object>{angleArrayRadians});
+
+            // Assert
+            Assert.Throws<MathSolverExeption>(result);
+        }
+        #endregion
+
+        #region snippet_StringLineToDouble_InvokesMethod_IfInputIscorrect
+        [Fact]
+        public void StringLineToDouble_ReturnsDoubleArrray_IfInputIscorrect()
+        {
+            // Arrange
+            string stringWithDoubles= "0.48 -0.8 -0.99";
+
+            // Act
+            var result = MathSolver.StringLineToDouble(stringWithDoubles);
+
+            // Assert
+            Assert.IsType<double[]>(result);
+        }
+        #endregion
+        #region snippet_StringLineToDouble_ThrowsExeption_IfNameOfMethodIsIncorrect
+        [Fact]
+        public void StringLineToDouble_ThrowsExeption_IfStringIsIncorrect()
+        {
+            // Arrange
+            string stringWithDoubles = "0.4234dsxfd8 -0.8 -0.99";
+
+            // Act
+            void result() => MathSolver.StringLineToDouble(stringWithDoubles);
+
+            // Assert
+            Assert.Throws<MathSolverExeption>(result);
+        }
+        #endregion
+        #region snippet_StringLineToDouble_ThrowsExeption_IfArrayIsNull
+        [Fact]
+        public void StringLineToDouble_ThrowsExeption_IfArrayIsNull()
+        {
+            // Arrange
+            string stringWithDoubles = null;
+
+            // Act
+            void result() => MathSolver.StringLineToDouble(stringWithDoubles);
 
             // Assert
             Assert.Throws<MathSolverExeption>(result);

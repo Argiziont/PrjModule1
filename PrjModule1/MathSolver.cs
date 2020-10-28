@@ -62,7 +62,7 @@ namespace PrjModule1
         public static double GetSumSin(double[] angles, int type, int decimals)
         {
             double sum = 0;
-            if (angles==null)
+            if (angles == null)
                 throw new MathSolverExeption("Array couldn't be empty");
             if (decimals < 0)
                 throw new MathSolverExeption("Decimals couldn't be zero");
@@ -552,7 +552,7 @@ namespace PrjModule1
               .GetMethods()
               .Where(x => x.Name == methodName)
               .FirstOrDefault(x => x.GetParameters().Length == args.Count);
-            
+
             try
             {
                 return method.Invoke(null, args.ToArray());
@@ -570,19 +570,24 @@ namespace PrjModule1
         /// <returns>Array of double numbers</returns>
         public static double[] StringLineToDouble(string stringLine)
         {
+            if (stringLine == null)
+                throw new MathSolverExeption("Array couldn't be empty");
+
             string[] stringArray = stringLine.Split(" ");
             List<double> doubleList = new List<double>();
 
             foreach (string item in stringArray)
             {
+                double convertedNumber = 0;
                 try
                 {
-                    doubleList.Add(Convert.ToDouble(item));
+                    convertedNumber = Convert.ToDouble(item);
                 }
-                catch (MathSolverExeption)
+                catch
                 {
                     throw new MathSolverExeption("Incorrect string input");
                 }
+                doubleList.Add(convertedNumber);
             }
             return doubleList.ToArray();
         }
