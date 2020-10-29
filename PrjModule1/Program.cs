@@ -13,6 +13,31 @@ namespace PrjModule1
             System.Threading.Thread.CurrentThread.CurrentCulture = customCulture;
             //
 
+            while (true)
+            {
+
+                Menu();
+
+                Console.WriteLine("Press 'e' for exit or enter for continue");
+
+                ConsoleKeyInfo exitState = Console.ReadKey();
+                switch (exitState.Key)
+                {
+                    case ConsoleKey.Enter:
+                        Console.Clear();
+                        continue;
+                    case ConsoleKey.E:
+                        return; ;
+                    default:
+                        return;
+
+                }
+            }
+
+        }
+
+        private static void Menu()
+        {
             //Ask user what he want to do
             Console.WriteLine("Select the method of providing the source data \n" +
                 "Press 1- for manual\n" +
@@ -155,7 +180,7 @@ namespace PrjModule1
                 }
             }
             return methodsForChose;
-        } 
+        }
 
         private static void ConsoleWithColor(string message, ConsoleColor color)
         {
